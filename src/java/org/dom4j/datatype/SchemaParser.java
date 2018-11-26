@@ -190,9 +190,13 @@ public class SchemaParser {
             DocumentFactory parentFactory) {
         String name = xsdElement.attributeValue("name");
         String type = xsdElement.attributeValue("type");
-        QName qname = getQName(name);
 
-        DatatypeElementFactory factory = getDatatypeElementFactory(qname);
+        QName qname = null;
+        DatatypeElementFactory factory = null;
+        if (name != null) {
+            qname = getQName(name);
+            factory = getDatatypeElementFactory(qname);
+        }
 
         if (type != null) {
             // register type with this element name
