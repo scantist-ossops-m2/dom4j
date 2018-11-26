@@ -13,14 +13,7 @@ import org.dom4j.DocumentFactory;
 import org.dom4j.QName;
 import org.dom4j.tree.DefaultDocument;
 
-import org.w3c.dom.Attr;
-import org.w3c.dom.CDATASection;
-import org.w3c.dom.DOMException;
-import org.w3c.dom.Document;
-import org.w3c.dom.EntityReference;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.NodeList;
-import org.w3c.dom.ProcessingInstruction;
+import org.w3c.dom.*;
 
 /**
  * <p>
@@ -193,6 +186,66 @@ public class DOMDocument extends DefaultDocument implements Document {
         return DOMNodeHelper.hasAttributes(this);
     }
 
+    @Override
+    public String getBaseURI() {
+        return null;
+    }
+
+    @Override
+    public short compareDocumentPosition(Node node) throws DOMException {
+        return 0;
+    }
+
+    @Override
+    public String getTextContent() throws DOMException {
+        return null;
+    }
+
+    @Override
+    public void setTextContent(String s) throws DOMException {
+
+    }
+
+    @Override
+    public boolean isSameNode(Node node) {
+        return false;
+    }
+
+    @Override
+    public String lookupPrefix(String s) {
+        return null;
+    }
+
+    @Override
+    public boolean isDefaultNamespace(String s) {
+        return false;
+    }
+
+    @Override
+    public String lookupNamespaceURI(String s) {
+        return null;
+    }
+
+    @Override
+    public boolean isEqualNode(Node node) {
+        return false;
+    }
+
+    @Override
+    public Object getFeature(String s, String s1) {
+        return null;
+    }
+
+    @Override
+    public Object setUserData(String s, Object o, UserDataHandler userDataHandler) {
+        return null;
+    }
+
+    @Override
+    public Object getUserData(String s) {
+        return null;
+    }
+
     // org.w3c.dom.Document interface
     // -------------------------------------------------------------------------
     public NodeList getElementsByTagName(String name) {
@@ -290,6 +343,76 @@ public class DOMDocument extends DefaultDocument implements Document {
 
     public org.w3c.dom.Element getElementById(String elementId) {
         return DOMNodeHelper.asDOMElement(elementByID(elementId));
+    }
+
+    @Override
+    public String getInputEncoding() {
+        return null;
+    }
+
+    @Override
+    public String getXmlEncoding() {
+        return null;
+    }
+
+    @Override
+    public boolean getXmlStandalone() {
+        return false;
+    }
+
+    @Override
+    public void setXmlStandalone(boolean b) throws DOMException {
+
+    }
+
+    @Override
+    public String getXmlVersion() {
+        return null;
+    }
+
+    @Override
+    public void setXmlVersion(String s) throws DOMException {
+
+    }
+
+    @Override
+    public boolean getStrictErrorChecking() {
+        return false;
+    }
+
+    @Override
+    public void setStrictErrorChecking(boolean b) {
+
+    }
+
+    @Override
+    public String getDocumentURI() {
+        return null;
+    }
+
+    @Override
+    public void setDocumentURI(String s) {
+
+    }
+
+    @Override
+    public Node adoptNode(Node node) throws DOMException {
+        return null;
+    }
+
+    @Override
+    public DOMConfiguration getDomConfig() {
+        return null;
+    }
+
+    @Override
+    public void normalizeDocument() {
+
+    }
+
+    @Override
+    public Node renameNode(Node node, String s, String s1) throws DOMException {
+        return null;
     }
 
     // Implementation methods

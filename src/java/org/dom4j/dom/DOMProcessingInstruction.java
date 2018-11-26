@@ -12,10 +12,7 @@ import java.util.Map;
 import org.dom4j.Element;
 import org.dom4j.tree.DefaultProcessingInstruction;
 
-import org.w3c.dom.DOMException;
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.NodeList;
+import org.w3c.dom.*;
 
 /**
  * <p>
@@ -159,6 +156,66 @@ public class DOMProcessingInstruction extends DefaultProcessingInstruction
 
     public boolean hasAttributes() {
         return DOMNodeHelper.hasAttributes(this);
+    }
+
+    @Override
+    public String getBaseURI() {
+        return null;
+    }
+
+    @Override
+    public short compareDocumentPosition(Node node) throws DOMException {
+        return 0;
+    }
+
+    @Override
+    public String getTextContent() throws DOMException {
+        return null;
+    }
+
+    @Override
+    public void setTextContent(String s) throws DOMException {
+
+    }
+
+    @Override
+    public boolean isSameNode(Node node) {
+        return false;
+    }
+
+    @Override
+    public String lookupPrefix(String s) {
+        return null;
+    }
+
+    @Override
+    public boolean isDefaultNamespace(String s) {
+        return false;
+    }
+
+    @Override
+    public String lookupNamespaceURI(String s) {
+        return null;
+    }
+
+    @Override
+    public boolean isEqualNode(Node node) {
+        return false;
+    }
+
+    @Override
+    public Object getFeature(String s, String s1) {
+        return null;
+    }
+
+    @Override
+    public Object setUserData(String s, Object o, UserDataHandler userDataHandler) {
+        return null;
+    }
+
+    @Override
+    public Object getUserData(String s) {
+        return null;
     }
 
     // org.w3c.dom.ProcessingInstruction interface

@@ -165,6 +165,11 @@ public class DOMDocumentFactory extends DocumentFactory implements
         return document;
     }
 
+    @Override
+    public Object getFeature(String s, String s1) {
+        return null;
+    }
+
     // Implementation methods
     protected DOMDocumentType asDocumentType(org.w3c.dom.DocumentType docType) {
         if (docType instanceof DOMDocumentType) {
